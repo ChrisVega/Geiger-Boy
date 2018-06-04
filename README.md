@@ -28,7 +28,7 @@ Note that the buzzer and LED + 200Ω were put in parallel in the final circuit w
 ## Parts, procedure and specifications
 A PWM signal with a duty cycle of 75% was produced by an Arduino Uno and used to control the switch for the DC-DC boost converter. The input voltage was 5V and 400V was expected at the output. 
 
-An SBM-20 surplus Soviet Geiger Muller tube was used in this circuit which requires a working voltage between 350V-500V. The tube is capable of detecting beta and gamma particles. When the tube produces a pulse this applies a current to the base which activates a transistor. This also produces a pulse but one which can be better used by a micro controller. This pulse is then used as the count event for getting COM and triggering the buzzer and LED.
+An SBM-20 surplus Soviet Geiger Muller tube was used in this circuit which requires a working voltage between 350V-500V. The tube is capable of detecting beta and gamma particles. When the tube produces a pulse this applies a current to the base which activates a transistor. This also produces a pulse but one which can be better used by a micro controller. This pulse is then used as the count event for getting CPM and triggering the buzzer and LED.
 
 ### Parts
 - 1 SBM-20 Geiger Muller tube
