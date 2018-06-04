@@ -91,11 +91,15 @@ As mentioned above the Geiger counter had slighly higer readings which fluctuaed
 Compared to the terra-p my Geiger counter seemed very primative. The terra-p seemed to produce readings more quickly which varried less and low dose rated as well as displaying the total accumulated dose. Along with redesigning the device to better fit the the housing adding in the functionality for storing and displaying the total accumulated dose allowing it to also function as a dosimeter.
 
 ## Geiger Boy v.2
-This version will attempt to solve the issues that I was not able to address in the first version of the Geiger Boy outlined in the improvements seciton. To acomplish this a smaller Geiger counter circuit, also provided by [RH electronics](http://www.rhelectronics.net/store/high-voltage-geiger-probe-driver-power-supply-module-420v-550v-with-ttl-digitized-pulse-output.html) will be utilized. For storing and displaying the total accumulated dose and FRAM chip will be utilized due to it's large amount read write cycles. [Adafruit supplies a break out board](https://www.adafruit.com/product/1895) for an FRAM chip allowing for easier connecitons.
+This version will attempt to solve the issues that I was not able to address in the first version of the Geiger Boy outlined in the improvements seciton. To acomplish this a smaller Geiger counter circuit, also provided by [RH electronics](http://www.rhelectronics.net/store/high-voltage-geiger-probe-driver-power-supply-module-420v-550v-with-ttl-digitized-pulse-output.html) will be utilized. For storing and displaying the total accumulated dose and FRAM chip will be utilized due to it's large amount read write cycles. A high write cycle is needed as the total accumulated dose must be read, upadated, and wirrten onto the FRAM every 10 seconds when a reading is completed. [Adafruit supplies a break out board](https://www.adafruit.com/product/1895) for an FRAM chip allowing for easier connecitons.
 
 ### Progress
 The housing issue has been solved since the size of the circuit was reduced. Because the batter well of the GameBoy holds 4 AA batteries but my device only requires 3 a hole was cut out of the wall for the battery well allowing the Geiger tube to sit inside safely next to the batteries. 
 
+The new Geiger counter circuit is working as intended, a 1kΩ pull up resistor is however needed to revent the interrupt pin from floating.
+
 The FRAM module has a library supplied by Adafruit as well but is not compatable with the ATtiny85 due to it's use of the Wire library. The I2C FRAM library was modified to instead use the TinywireM library allowing for compatability with the ATtiny85 as well as cleaning up some code wich would be unnesesary on the ATtiny85.
 
 The library which was used for the sd1306 OLED was found to be incompatable with the TinywireM library. It was modified to utilize TinywireM for I2C transmission instead as well as cleaning up the code. 
+
+Total accumulated does is able to be stored on the FRAM and read to be displayed on the screen. The circuit was tested on a bread board as is currently working as intended, although the image previously displayed on start up had to be removed as it took up too much space.
