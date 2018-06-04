@@ -71,7 +71,7 @@ The device was then tested using uranium glass that was available to ensure it w
 ## Circuit
 ![x](https://i.imgur.com/rjDOTEW.png)
 
-Above is the circuit diagram for the ATtiny shield which serves as the connection point input, output and power for the display, Geiger counter and ATtiny85.
+Above is the circuit diagram for the ATtiny shield which serves as the connection point input, output and power for the display, Geiger counter and ATtiny85. The OLED display's SDA and SCL should be connected to the shield's. The Geiger counter output pin should go to INT.
 
 ## Parts, procedure and specifications
 The Geiger Boy v.1 can be powered by a 5V power supply, a battery pack with 3 AA batteries was chosen in this implementation. The battery pack was attached to the rear exterior of the housing with the wires entering through the slot where a game cartridge would normally be inserted. The positive lead was connected to a switch to turn the device off and on which connected to the ATtiny's shield, along with the negative lead, to power the other components of the device. 
