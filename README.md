@@ -26,14 +26,14 @@ A duty cycle of 75% was produced by an Arduino Uno and used to contorl the switc
 An SBM-20 surplus Soviet Geiger Muller tube was used in this circuit which requires a working voltage between 350V-500V. The tube is capable of detecting alpha and gamma particles.
 
 Parts
--1 SBM-20 Geiger Muller tube
--1 10mH inductor 
--1 4.7nF 1000V capactitor
--1 of each MPSA44 and 2n2222 transistors
--1  1n4007 or 1n4004
--1 piezo buzzer
--1 LED
--Various resistors
+- 1 SBM-20 Geiger Muller tube
+- 1 10mH inductor 
+- 1 4.7nF 1000V capactitor
+- 1 of each MPSA44 and 2n2222 transistors
+- 1  1n4007 or 1n4004
+- 1 piezo buzzer
+- 1 LED
+- Various resistors
 
 ### Results
 A voltage of about 393V was produced by the DC-DC boost converter whcih was suitable for the SBM-20. This resulted in the desired effect of being able to detect radioactive particled which struck the tube. 
