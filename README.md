@@ -66,7 +66,7 @@ While this was adequate I was not happy with the outcome as I thought it looked 
 
 First issue, the circuit was too large with the Geiger tube for the top of the housing to close due to small plastic protrusions which held the GameBoy buttons in place. The battery well was cut out for the circuit to sit lower in the housing meaning another method for holding the batteries had to be found, leading to the second issue. Third was the LCD screen was too large for the window, a lot of cutting would have to be done to have it fit. As finals weeks was approaching quickly, and the housing being smashed in the mail, I would not have enough time to properly lay things out or wait for the replacement housing to start designing and had to rush. This resulted in some parts, mainly the battery pack, being done at level which I consider sub-par, as I did not have time to choose a smaller circuit or do major redesigns. The battery well was cut out for the circuit, the battery pack was attached to the exterior of the housing on the back, and the screen switched to an ssd1306 OLED display which also greatly increased the battery life. It was reprogrammed for the display and assembled. The end product, the Geiger Boy v.1.
 
-The device was then tested using uranium glass that was available to ensure it was actually detecting radiation as was thrown in a back pack for a week to determine if any points of the housing were too weak. 
+The device was then tested using uranium glass that was available to ensure it was actually detecting radiation and was thrown in a back pack for a week to determine if any points of the housing were too weak. 
 
 ## Circuit
 ![x](https://i.imgur.com/rjDOTEW.png)
