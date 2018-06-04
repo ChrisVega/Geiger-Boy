@@ -26,7 +26,7 @@ The DC-DC boost converted is a circuit which steps up an input voltage to a high
 Note that the buzzer and LED + 200Ω were put in parallel in the final circuit which produced a louder click. The two can also be controlled by a transistor used as a switch which produces slightly better results but was not needed for this in class demonstration. The base is connected to the Arduino pin and a 5V source is connected to the collector and the LED and buzzer are connected to the emitter. 
 
 ### Parts, procedure and specifications
-A duty cycle of 75% was produced by an Arduino Uno and used to control the switch for the DC-DC boost converter. The input voltage was 5V and 400V was expected at the output. 
+A PWM signal with a duty cycle of 75% was produced by an Arduino Uno and used to control the switch for the DC-DC boost converter. The input voltage was 5V and 400V was expected at the output. 
 
 An SBM-20 surplus Soviet Geiger Muller tube was used in this circuit which requires a working voltage between 350V-500V. The tube is capable of detecting beta and gamma particles. When the tube produces a pulse this applies a current to the base which activates a transistor. This also produces a pulse but one which can be better used by a micro controller. This pulse is then used as the count event for getting COM and triggering the buzzer and LED.
 
