@@ -62,6 +62,8 @@ The initial design was to use an Arduino Uno and LCD screen powered by a 9V batt
 
 At some point I had the great idea to use a GameBoy housing as the housing for my circuit. It was designed to be compact, portable and hold batteries internally and have a window for a screen and holes for the switches. It seemed perfect, and would have been if my components were GameBoy sized and shaped. First issue, the circuit was too large with the Geiger tube for the top of the housing to close due to small plastic protrusions which held the GameBoy buttons in place. This meant I had to cut out the battery well for the circuit to sit lower in the housing meaning I would have to find another way to store batteries, the second issue. Third was the LCD screen was too large for the window, I would have to do a lot of cutting to have it fit. As finals weeks was approaching quickly, and the housing being smashed in the mail, I would not have enough time to properly lay things out or wait for the replacement housing to start designing and had to rush. This resulted in some parts, mainly the battery pack, being done at level which I consider sub-par, as I did not have time to choose a smaller circuit or do major redesigns. The battery well was cut out for the circuit, the battery pack was attached to the exterior of the housing on the back, and I switch to using an ssd1306 OLED display instead which also greatly increased the battery life. It was reprogrammed for the display and assembled. The end product, the Geiger Boy v.1.
 
+The device was then tested using uranium glass that was available to ensure it was actually detecting radiation as was thrown in a back pack for a week to determine if any points of the housing were too weak. 
+
 ### Circuit
 ![x](https://i.imgur.com/rjDOTEW.png)
 
@@ -108,3 +110,8 @@ The FRAM module has a library supplied by Adafruit as well but is not compatible
 The library which was used for the sd1306 OLED was found to be incompatible with the TinywireM library. [The ssd1306xled library was modified](https://github.com/ChrisVega/ssd1306xled-I2C) to utilize TinywireM for I2C transmission instead as well as cleaning up the code. 
 
 Total accumulated does is able to be stored on the FRAM and read to be displayed on the screen. The circuit was tested on a bread board as is currently working as intended, although the image previously displayed on startup had to be removed as it took up too much space.
+
+### Todo
+- Code optimization
+- Fit circuit in housing
+- Testing
