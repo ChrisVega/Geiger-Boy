@@ -51,6 +51,7 @@ The Geiger boy was built using this circuit from [RH electronics](http://www.rhe
 The tour provided terra-p Geiger counters which I used to compare with my device. The result was that my Geiger counter was a little more erratic and had slightly higher readings at low CPM and dose rates (essentially only at background radiation). Theirs would read a steady 0.12 - 0.13uSv/h where mine would fluctuate between 0 - 0.26uSv/h. At background radiation this is not an issue and is well within typical dose rates. At high does rate my Geiger counter produced nearly the same results as the terra-p, with a difference of a few decimal places. The difference at low dose rates can be due to the terra-p being able to measure beta and gamma individually whereas the tube I used is only capable of measuring both. Over all I am confident that my Geiger counter was reliable and produced accurate results throughout its use and can call the Geiger Boy v.1 a success.
 
 [The code for the initial Arduino Uno version can be found here.](https://github.com/ChrisVega/Geiger-Counter)
+
 [The code used in the Geiger Boy v.1 as well as the previous version using an LCD screen can be found here.](https://github.com/ChrisVega/Geiger-Counter-ATtiny85)
 
 ## Design procedure and process
