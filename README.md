@@ -48,6 +48,9 @@ The Geiger boy was built using this circuit from [RH electronics](http://www.rhe
 
 The tour provided terra-p Geiger counters which I used to compared with my device. The result was that my Geiger counter was a little more erratic and had slightly higher readings at low CPM and dose rates (essentially only at background radiation). Theirs would read a steady 0.12 - 0.13uSv/h where mine would fluctuate between 0.12 - 0.26uSv/h. At background radiation this is not an issue and is well within typical dose rates. At high does rate my Geiger counter produced nearly the same results as th terra-p, whith a difference of a few decimal places. The difference at low dose rates can be due to the terra-p being able to measure alpha and gamma individually where as the tube I used is only capable of measuring both. Over all I am confident that my Geiger counter was reliable and prodced accurate results throughout it's use and can call the Geiger Boy v.1 a success.
 
+[The code for the initial Arduino Uno version can be found here.](https://github.com/ChrisVega/Geiger-Counter)
+[The code used in the Geiger Boy v.1 as well as the previous version using an LCD screen can be found here.](https://github.com/ChrisVega/Geiger-Counter-ATtiny85)
+
 ### Design procedure and process
 I tried to apply all the information about designing devices and products that was taught to us in class since this was my first "large" project that had it's own housing. This turned out poorly, but that was to be expected. It gave me a great hands on learning experience with programming and a design process which I will apply to v.2 to make things move along smoother and other projects.
 
@@ -96,10 +99,10 @@ This version will attempt to solve the issues that I was not able to address in 
 ### Progress
 The housing issue has been solved since the size of the circuit was reduced. Because the batter well of the GameBoy holds 4 AA batteries but my device only requires 3 a hole was cut out of the wall for the battery well allowing the Geiger tube to sit inside safely next to the batteries. 
 
-The new Geiger counter circuit is working as intended, a 1kΩ pull up resistor is however needed to revent the interrupt pin from floating.
+The new Geiger counter circuit is working as intended, a 1kΩ pull up resistor is however needed to prevent the interrupt pin from floating.
 
-The FRAM module has a library supplied by Adafruit as well but is not compatable with the ATtiny85 due to it's use of the Wire library. The I2C FRAM library was modified to instead use the TinywireM library allowing for compatability with the ATtiny85 as well as cleaning up some code wich would be unnesesary on the ATtiny85.
+The FRAM module has a library supplied by Adafruit as well but is not compatable with the ATtiny85 due to it's use of the Wire library. [The I2C FRAM library was modified](https://github.com/ChrisVega/ATtiny-I2C-FRAM-Driver) to instead use the TinywireM library allowing for compatability with the ATtiny85 as well as cleaning up some code wich would be unnesesary on the ATtiny85.
 
-The library which was used for the sd1306 OLED was found to be incompatable with the TinywireM library. It was modified to utilize TinywireM for I2C transmission instead as well as cleaning up the code. 
+The library which was used for the sd1306 OLED was found to be incompatable with the TinywireM library. [The ssd1306xled library was modified](https://github.com/ChrisVega/ssd1306xled-I2C) to utilize TinywireM for I2C transmission instead as well as cleaning up the code. 
 
 Total accumulated does is able to be stored on the FRAM and read to be displayed on the screen. The circuit was tested on a bread board as is currently working as intended, although the image previously displayed on start up had to be removed as it took up too much space.
