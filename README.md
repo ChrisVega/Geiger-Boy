@@ -5,7 +5,9 @@ Half GameBoy, half Geiger counter. It's the Geiger Boy!
 The Geiger Boy stated as a poersonal project with a simple goal, make a Geiger counter using an arduino which I would use when I went to Chernobyl. It later split into two monsters, a project for my electronics II class and the Geiger Boy. I was going to bring a circuit that I desinged and a circuit built from a kit to compare it to originaly. Due to concerns about brining multiple homemade electronics on board a flight I ended up only bringing the circuit built from the kit. I thought my circuit would attract too much attention and end up with everything being confiscated and leaving me without a Geiger counter in Chernobyl. This kit circuit was used as the circuit in the Geiger Boy v1. 
 
 ## Electronics II project
-The Electronics II project to design and build a DC-DC boost converter to provide the voltage needed for a Geiger counter. 
+![x](https://i.imgur.com/9vHRrGx.png)
+
+The Electronics II project was to design and build a DC-DC boost converter to provide the voltage needed to supply a Geiger Muller tube for use in a Geiger counter. 
 
 ### Project description
 The circuit uses a DC-DC boost converter to achive the 400V needd across the Geiger Muller tube an an Arduino Uno to generate the PWM signal, supply power and process the results. Once the voltage is applied across the tube it will begin producing electical pulses when struck by a radioactive particle. When a particle is detected the count is incremented, for getting the CPM, and a pin on the arduino sends out a quick pulse to blink an LED produce a "click" through a piezo buzzer.
